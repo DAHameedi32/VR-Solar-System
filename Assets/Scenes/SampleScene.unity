@@ -569,10 +569,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.005
-  velocity: 20
-  thrust: 20
+  velocity: 0.7053004
+  thrust: 0.1
   point_of_origin: {fileID: 1140153059}
   projectile: {fileID: 4209832658977314158, guid: d9cbc1a984151584092d60116f50f94e, type: 3}
+  isFired: 0
 --- !u!1 &418010438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1309,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 2000
   field of view: 106.29496
   orthographic: 0
   orthographic size: 5
@@ -1651,7 +1652,7 @@ Transform:
   m_GameObject: {fileID: 1140153059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalPosition: {x: 0.47, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
