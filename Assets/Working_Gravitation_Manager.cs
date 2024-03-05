@@ -10,7 +10,6 @@ public class Working_Gravitation_Manager : MonoBehaviour
     public float w = 1.0f; //Omega (Angular velocity)
 
     GameObject[] celestialObjects; //Array containing all celestial objects in the scene
-    GameObject[] satellites; //Array containing all satellites in the scene
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +20,7 @@ public class Working_Gravitation_Manager : MonoBehaviour
     //Update called once every frame
     void Update()
     {
+        //constantly looks for game objects with the tag
         celestialObjects = GameObject.FindGameObjectsWithTag("celestial_body");
     }
 
@@ -51,7 +51,11 @@ public class Working_Gravitation_Manager : MonoBehaviour
 
                     //applies the calculated linear force and angular velocity to the necessary rigidbody, as well
                     a.GetComponent<Rigidbody>().AddForce((b.transform.position - a.transform.position).normalized * (G * (m1 * m2)/(r*r)));
-                    a.GetComponent<Rigidbody>().angularVelocity += Vector3.up * w; //N.B. Arbitrary for now
+                    if(a.GetComponent<Rigidbody>().mass >= 1)
+                    {
+                        a.GetComponent<Rigidbody>().angularVelocity += Vector3.up * w; //N.B. Arbitrary for now
+                    }
+                    
                 }
 
             }
