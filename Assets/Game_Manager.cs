@@ -45,6 +45,7 @@ public class Game_Manager : MonoBehaviour
                 //if the distance to the target planet is < Hill-radius, then the objective is considered completed, and a new objective is given.
                 if((targ.transform.position - i.transform.position).magnitude < HillRadii[index])
                 {
+                    Debug.Log("Velocity: "+i.GetComponent<Rigidbody>().velocity);
                     Debug.Log("Objective Complete!");
                     return_value = true;
                 }

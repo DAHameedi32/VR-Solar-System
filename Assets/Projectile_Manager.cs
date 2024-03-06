@@ -12,6 +12,7 @@ public class Projectile_Manager : MonoBehaviour
     public GameObject projectile;
     public float mass_of_projectile;
     public bool isFired = false;
+    //[SerializeField] Vector2 Direction = new Vector3 (1, 1);
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,12 @@ public class Projectile_Manager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ButtonPressed()
     {
         
         //make it so that the point of origin will be based on user inputs, and then destroy itself.
         //if input is pressed fire a projectile from the origin point with velocity
-        if(isFired == true)
-        {
+       
             GameObject projectile_instance = Instantiate(projectile, point_of_origin.GetComponent<Transform>().position,
                                                          point_of_origin.GetComponent<Transform>().rotation);
             projectile_instance.tag = "celestial_body";
@@ -33,6 +33,5 @@ public class Projectile_Manager : MonoBehaviour
 
             projectile_instance.GetComponent<Rigidbody>().AddForce(Vector3.forward * thrust, ForceMode.Impulse);
             isFired = false;
-        }
     }
 }
