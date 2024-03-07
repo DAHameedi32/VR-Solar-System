@@ -20,6 +20,8 @@ public class Projectile_Manager : MonoBehaviour
     public void OnSliderValueChanged()
     {
         Launch_Angle = slider.value;
+        //set the angle of the point of origin to the angle of the UI Slider (in the y-direction)
+        point_of_origin.GetComponent<Transform>().Rotate(0, Launch_Angle, 0, Space.World);
     }
     
     //when fire button is pressed
@@ -28,8 +30,6 @@ public class Projectile_Manager : MonoBehaviour
         
         //make it so that the point of origin will be based on user inputs, and then destroy itself.
         //if input is pressed fire a projectile from the origin point with velocity
-            //set the angle of the point of origin to the angle of the UI Slider (in the y-direction)
-            point_of_origin.GetComponent<Transform>().Rotate(0, Launch_Angle, 0);
             GameObject projectile_instance = Instantiate(projectile, point_of_origin.GetComponent<Transform>().position,
                                                          point_of_origin.GetComponent<Transform>().rotation);
             projectile_instance.tag = "celestial_body";
