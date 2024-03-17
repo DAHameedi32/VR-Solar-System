@@ -14,7 +14,7 @@ public class Purge : MonoBehaviour
         foreach (GameObject obj in allObjects)
         {
             // Check if the name matches "Projectile(Clone)"
-            if (obj.name == "Projectile(Clone)")
+            if (obj.name == "Projectile 1(Clone)")
             {
                 // Destroy the GameObject
                 Destroy(obj);
