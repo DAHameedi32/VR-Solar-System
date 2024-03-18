@@ -1,0 +1,8 @@
+
+=== Mon Mar  4 12:20:36 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.xr.openxr from version 1.9.1 to 1.10.0
