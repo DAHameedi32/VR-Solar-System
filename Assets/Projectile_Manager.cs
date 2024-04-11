@@ -34,7 +34,6 @@ public class Projectile_Manager : MonoBehaviour
                                                          point_of_origin.GetComponent<Transform>().rotation);
 
 
-            projectile_instance.GetComponent<Transform>().Rotate(-90, 0, 0);
             projectile_instance.tag = "celestial_body";
             projectile_instance.GetComponent<Rigidbody>().mass = mass_of_projectile;
             

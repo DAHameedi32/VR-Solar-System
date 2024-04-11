@@ -4,36 +4,38 @@ using UnityEngine;
 using System.IO;
 public class Probe_Bata : MonoBehaviour
 {
-    public string fileName = "data.txt"; // Name of the text file to write to
+    private string fileName = "data.txt"; // Name of the text file to write to
     
     public float creationTime;
-    public List<(float, Vector3)> Velocity_Data = new List<(float, Vector3)>();
-
+    public List<string> Velocity_Data = new List<string>();
+    public string filePath;
     void Start()
     {
         // Record the time when the object is instantiated
         creationTime = Time.time;
+        filePath = Path.Combine("C:/Users/Daniyal/AppData/LocalLow/DefaultCompany/VR Solar System", fileName);
+        Debug.Log("Writing to path:" + filePath);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //collects all velocity data at a given time.
         float timeSinceCreation = Time.time - creationTime;
-        Velocity_Data.Add((timeSinceCreation, this.GetComponent<Rigidbody>().velocity));
+        (float, Vector3, Vector3) Buffer = (timeSinceCreation, this.GetComponent<Rigidbody>().velocity, this.GetComponent<Transform>().position);
+        Velocity_Data.Add(Buffer.ToString());
+
     }
     public void Collect_Data()
     {
-         string filePath = Path.Combine(Application.persistentDataPath, fileName);
-
-             // Open a stream writer to write to the file
-            using (StreamWriter writer = new StreamWriter(filePath))
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            foreach(string item in Velocity_Data)
             {
-                for(int i = 0; i<Velocity_Data.Count; i++)
-                {
-                    writer.WriteLine(Velocity_Data[i]);
-                }
+                writer.WriteLine(item);
             }
-        Debug.Log("Data dumped to file: " + filePath);
+        }
+        Debug.Log("List contents written to file: " + filePath);
     }
+
 }

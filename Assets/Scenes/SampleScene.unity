@@ -1940,10 +1940,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.7053004
-  thrust: 0.0000001
+  thrust: 0.0004029698
   point_of_origin: {fileID: 1140153060}
-  projectile: {fileID: 6868380601398828161, guid: b45ae26e7e9b52e4cbe8f4fa7c175193, type: 3}
-  mass_of_projectile: 0.000000001
+  projectile: {fileID: 4438903342531170301, guid: c98a1cfd20f83f643ae70d444043a8dd, type: 3}
+  mass_of_projectile: 0.0001
   Launch_Angle: 0
   slider: {fileID: 1639068650}
 --- !u!96 &377663969
@@ -6303,13 +6303,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140153059}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 25.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1140153061
 MonoBehaviour:
   m_ObjectHideFlags: 0
