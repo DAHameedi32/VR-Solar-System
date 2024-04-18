@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Working_Gravitation_Manager : MonoBehaviour
 {
-    public float G = 100f; //Gravitational constant
+    public float G = 1.49677869484819e-05f; //Gravitational constant
     public float w = 1.0f; //Omega (Angular velocity)
 
     GameObject[] celestialObjects; //Array containing all celestial objects in the scene
@@ -17,16 +17,11 @@ public class Working_Gravitation_Manager : MonoBehaviour
         InitialVelocity();
     }
 
-    //Update called once every frame
-    void Update()
-    {
-        //constantly looks for game objects with the tag
-        celestialObjects = GameObject.FindGameObjectsWithTag("celestial_body");
-    }
-
     //Fixed Update called once every 0.035 seconds
     void FixedUpdate()
     {
+        //constantly looks for game objects with the tag
+        celestialObjects = GameObject.FindGameObjectsWithTag("celestial_body");
         //apply gravitational force to all relevant bodies
         compute_Gravity(celestialObjects);
         //make this return the gravitation at every 
