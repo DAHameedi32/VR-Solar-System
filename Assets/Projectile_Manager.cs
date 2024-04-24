@@ -27,16 +27,15 @@ public class Projectile_Manager : MonoBehaviour
     //when fire button is pressed
     public void ButtonPressed()
     {
-        
         //make it so that the point of origin will be based on user inputs, and then destroy itself.
         //if input is pressed fire a projectile from the origin point with velocity
-            GameObject projectile_instance = Instantiate(projectile, point_of_origin.GetComponent<Transform>().position,
+        GameObject projectile_instance = Instantiate(projectile, point_of_origin.GetComponent<Transform>().position,
                                                          point_of_origin.GetComponent<Transform>().rotation);
 
 
-            projectile_instance.tag = "celestial_body";
-            projectile_instance.GetComponent<Rigidbody>().mass = mass_of_projectile;
-            
-            projectile_instance.GetComponent<Rigidbody>().AddForce(point_of_origin.forward * thrust, ForceMode.Impulse);
+        projectile_instance.tag = "celestial_body";
+        projectile_instance.GetComponent<Rigidbody>().mass = mass_of_projectile;
+        //projectile_instance.LookAt(point_of_origin.GetComponent<Rigidbody>().velocity);
+        projectile_instance.GetComponent<Rigidbody>().AddForce(point_of_origin.right * thrust, ForceMode.Impulse);
     }
 }

@@ -66,12 +66,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6b53c1030a188c4d9884b36b6d8fd4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2277786785466549109}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6b53c1030a188c4d9884b36b6d8fd4e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5594782297686468475}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6b53c1030a188c4d9884b36b6d8fd4e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 308398807485368130}
   m_SourcePrefab: {fileID: 100100000, guid: f6b53c1030a188c4d9884b36b6d8fd4e, type: 3}
 --- !u!1 &4438903342531170301 stripped
 GameObject:
@@ -147,7 +141,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 100
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -209,30 +203,3 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &5594782297686468475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4438903342531170301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d02a03020b5df44a220de185a654a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creationTime: 0
-  Velocity_Data: []
-  filePath: 
---- !u!114 &308398807485368130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4438903342531170301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1fee630447d14a9162df3d515c250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

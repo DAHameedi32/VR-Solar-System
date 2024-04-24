@@ -14,13 +14,8 @@ public class TestMassCollecter : MonoBehaviour
     {   
         velocityData.Add(TestMass.GetComponent<Rigidbody>().velocity);
         positionData.Add(TestMass.GetComponent<Rigidbody>().position);
-        if(Collect_Data == true)
-        {
-            Collect_Data = false;
-            Dump_Data();
-        }
     }
-    void Dump_Data()
+    public void Dump_Data()
     {
          // Path to the file
         string vfilePath = Path.Combine(Application.persistentDataPath, velocityFileName);
