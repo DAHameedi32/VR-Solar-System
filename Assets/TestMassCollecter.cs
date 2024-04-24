@@ -5,7 +5,7 @@ using System.IO;
 public class TestMassCollecter : MonoBehaviour
 {
     public GameObject TestMass;
-    public bool Collect_Data = false;
+
     private List<Vector3> velocityData = new List<Vector3>();
     private List<Vector3> positionData = new List<Vector3>();
     public string velocityFileName = "velocity_data.txt"; // Name of the text file to write to
