@@ -208,10 +208,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 795100522}
   m_HandleRect: {fileID: 217246145}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
+  m_MinValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -303,7 +303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 770d86d55fa7c4c45a47b27fad372a46, type: 3}
+  - {fileID: 2100000, guid: 9dff01a94e9b97e419e1b363ab4c1c40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3207,7 +3207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TestMass: {fileID: 521498388}
-  Collect_Data: 0
   velocityFileName: velocity_data.txt
   positionFileName: position_data.txt
 --- !u!54 &521498390
@@ -4180,7 +4179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6629797300637803691, guid: 28f823e06104cee438aa7b228d8dbf11, type: 3}
+  - {fileID: 2100000, guid: 9dff01a94e9b97e419e1b363ab4c1c40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4901,7 +4900,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 7000
   field of view: 60
   orthographic: 0
@@ -11173,7 +11172,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 721bb9c3ac8154d409ab687766638d4f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b58f7bc99a202044bb414e58b27d2e21, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
